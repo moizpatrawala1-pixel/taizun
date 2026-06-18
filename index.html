@@ -1,0 +1,1778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Breakup Delivery™ — Professional breakup message delivery in Mumbai & worldwide. Skip the awkward conversation. We deliver the news, you get the closure."/>
+<meta name="keywords" content="breakup delivery service, breakup message Mumbai, professional breakup service, relationship ending service"/>
+<title>Breakup Delivery™ — We Say It So You Don't Have To</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+<style>
+  /* ─── RESET & BASE ─── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --black:   #0A0A0A;
+    --white:   #FFFEFE;
+    --green:   #12FF10;
+    --cyan:    #2AFFFC;
+    --orange:  #FF9B4C;
+    --grey:    #1A1A1A;
+    --midgrey: #2A2A2A;
+    --textgrey:#999;
+    --font-display: 'Bebas Neue', sans-serif;
+    --font-body:    'DM Sans', sans-serif;
+    --font-mono:    'Space Mono', monospace;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  ::selection { background: var(--green); color: var(--black); }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+
+  /* ─── PAGE SYSTEM ─── */
+  .page { display: none; min-height: 100vh; }
+  .page.active { display: block; }
+
+  /* ─── NAVBAR ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: rgba(10,10,10,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(18,255,16,0.15);
+    padding: 0 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 64px;
+  }
+  .nav-logo {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: var(--white);
+    cursor: pointer;
+  }
+  .nav-logo span { color: var(--green); }
+  .nav-links {
+    display: flex; gap: 2rem; list-style: none;
+    align-items: center;
+  }
+  .nav-links li a {
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--textgrey);
+    transition: color 0.2s;
+    cursor: pointer;
+  }
+  .nav-links li a:hover, .nav-links li a.active { color: var(--green); }
+  .nav-cta {
+    background: var(--green);
+    color: var(--black) !important;
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-weight: 700 !important;
+    font-size: 0.82rem !important;
+    transition: background 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--cyan) !important; }
+  .hamburger {
+    display: none; flex-direction: column; gap: 5px;
+    cursor: pointer; background: none; border: none; padding: 4px;
+  }
+  .hamburger span {
+    width: 24px; height: 2px; background: var(--white);
+    display: block; transition: all 0.3s;
+  }
+  .mobile-menu {
+    display: none; position: fixed; top: 64px; left: 0; right: 0; z-index: 999;
+    background: var(--grey);
+    padding: 1.5rem 5%;
+    flex-direction: column; gap: 1rem;
+    border-bottom: 1px solid var(--midgrey);
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    font-size: 1rem; font-weight: 500; color: var(--textgrey);
+    cursor: pointer; padding: 0.5rem 0;
+    border-bottom: 1px solid var(--midgrey);
+    transition: color 0.2s;
+  }
+  .mobile-menu a:hover { color: var(--green); }
+
+  /* ─── UTILITY ─── */
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
+  .section { padding: 100px 0; }
+  .section-label {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 1rem;
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+  }
+  .section-sub {
+    font-size: 1.1rem;
+    color: var(--textgrey);
+    max-width: 600px;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+  }
+  .tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border: 1px solid var(--green);
+    color: var(--green);
+    border-radius: 2px;
+    margin-bottom: 1.5rem;
+  }
+  .btn {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.25s;
+    border: none;
+  }
+  .btn-primary {
+    background: var(--green);
+    color: var(--black);
+  }
+  .btn-primary:hover { background: var(--cyan); transform: translateY(-2px); }
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    border: 1.5px solid var(--white);
+  }
+  .btn-outline:hover { border-color: var(--green); color: var(--green); }
+  .btn-orange {
+    background: var(--orange);
+    color: var(--black);
+  }
+  .btn-orange:hover { background: #ffb06a; transform: translateY(-2px); }
+  .divider {
+    width: 100%; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--green), transparent);
+    margin: 0;
+    opacity: 0.25;
+  }
+  .highlight { color: var(--green); }
+  .highlight-cyan { color: var(--cyan); }
+  .highlight-orange { color: var(--orange); }
+  .card {
+    background: var(--grey);
+    border: 1px solid var(--midgrey);
+    border-radius: 8px;
+    padding: 2rem;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .card:hover { border-color: var(--green); transform: translateY(-4px); }
+
+  /* ─── PAGE TOP OFFSET ─── */
+  .page-content { padding-top: 64px; }
+
+  /* ════════════════════════════════════
+     HOME PAGE
+  ════════════════════════════════════ */
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: var(--black);
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 60% 60% at 70% 50%, rgba(18,255,16,0.04) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 20% 80%, rgba(42,255,252,0.04) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .hero-grid-lines {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(18,255,16,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(18,255,16,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+  }
+  .hero-inner {
+    position: relative; z-index: 2;
+    max-width: 1200px; margin: 0 auto;
+    padding: 0 5%;
+    display: grid; grid-template-columns: 1fr 1fr;
+    align-items: center; gap: 4rem;
+  }
+  .hero-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 4px;
+    color: var(--green);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(3.5rem, 8vw, 7rem);
+    line-height: 0.95;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+  }
+  .hero-title .line-break { display: block; }
+  .hero-title .struck {
+    position: relative;
+    color: var(--textgrey);
+  }
+  .hero-title .struck::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0;
+    top: 50%; height: 3px;
+    background: var(--orange);
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: strikethrough 0.6s ease 1.2s forwards;
+  }
+  @keyframes strikethrough {
+    to { transform: scaleX(1); }
+  }
+  .hero-desc {
+    font-size: 1.15rem;
+    color: var(--textgrey);
+    line-height: 1.7;
+    max-width: 480px;
+    margin-bottom: 2.5rem;
+  }
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .hero-stats {
+    display: flex; gap: 2.5rem; margin-top: 3rem; flex-wrap: wrap;
+  }
+  .stat-item {}
+  .stat-num {
+    font-family: var(--font-display);
+    font-size: 2.8rem;
+    color: var(--green);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.78rem;
+    font-family: var(--font-mono);
+    color: var(--textgrey);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 4px;
+  }
+
+  /* THREAD VISUAL */
+  .hero-visual {
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+  }
+  .thread-container {
+    width: 100%; max-width: 420px;
+    aspect-ratio: 1;
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .thread-glow {
+    position: absolute; inset: -20px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(18,255,16,0.08) 0%, transparent 70%);
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+  }
+  .thread-svg-wrap {
+    width: 100%; height: 100%;
+  }
+  .thread-svg-wrap svg {
+    width: 100%; height: 100%;
+  }
+  .scissors-icon {
+    position: absolute;
+    font-size: 3rem;
+    animation: snip 2s ease-in-out infinite;
+  }
+  @keyframes snip {
+    0%, 80%, 100% { transform: rotate(-20deg) scale(1); }
+    40% { transform: rotate(20deg) scale(1.1); }
+  }
+
+  /* MARQUEE */
+  .marquee-section {
+    background: var(--green);
+    padding: 14px 0;
+    overflow: hidden;
+  }
+  .marquee-track {
+    display: flex; gap: 0;
+    animation: marquee 18s linear infinite;
+    white-space: nowrap;
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .marquee-item {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    letter-spacing: 4px;
+    color: var(--black);
+    text-transform: uppercase;
+    padding: 0 2rem;
+    flex-shrink: 0;
+  }
+  .marquee-dot { color: var(--black); opacity: 0.4; }
+
+  /* HOW IT WORKS */
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  .step-card {
+    background: var(--grey);
+    border: 1px solid var(--midgrey);
+    border-radius: 8px;
+    padding: 2rem 1.75rem;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s;
+  }
+  .step-card:hover { border-color: var(--cyan); }
+  .step-num {
+    font-family: var(--font-display);
+    font-size: 5rem;
+    line-height: 1;
+    color: rgba(18,255,16,0.07);
+    position: absolute;
+    top: -0.5rem; right: 1rem;
+    pointer-events: none;
+  }
+  .step-icon { font-size: 2rem; margin-bottom: 1rem; }
+  .step-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+  }
+  .step-desc { font-size: 0.9rem; color: var(--textgrey); line-height: 1.65; }
+
+  /* FEATURED SERVICE */
+  .service-feature {
+    background: var(--grey);
+    border: 1px solid var(--midgrey);
+    border-radius: 12px;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .service-feature::before {
+    content: '';
+    position: absolute; top: 0; left: 0; bottom: 0; width: 4px;
+    background: linear-gradient(180deg, var(--green), var(--cyan));
+    border-radius: 4px 0 0 4px;
+  }
+  .service-badge {
+    display: inline-block;
+    background: rgba(18,255,16,0.1);
+    border: 1px solid var(--green);
+    color: var(--green);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 2px;
+    margin-bottom: 1rem;
+  }
+  .service-name {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+  }
+  .service-desc { font-size: 0.95rem; color: var(--textgrey); line-height: 1.7; max-width: 500px; }
+  .service-price-box { text-align: center; }
+  .service-price {
+    font-family: var(--font-display);
+    font-size: 3.5rem;
+    color: var(--orange);
+    line-height: 1;
+  }
+  .service-price-label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--textgrey);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  /* TESTIMONIALS */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  .testi-card {
+    background: var(--grey);
+    border: 1px solid var(--midgrey);
+    border-radius: 8px;
+    padding: 1.75rem;
+    transition: border-color 0.3s;
+  }
+  .testi-card:hover { border-color: var(--cyan); }
+  .testi-stars { color: var(--orange); font-size: 1rem; margin-bottom: 1rem; letter-spacing: 2px; }
+  .testi-text { font-size: 0.95rem; color: var(--textgrey); line-height: 1.7; font-style: italic; margin-bottom: 1.25rem; }
+  .testi-text::before { content: '"'; color: var(--green); font-size: 1.5rem; line-height: 0; vertical-align: -0.4em; }
+  .testi-author { font-weight: 700; font-size: 0.9rem; }
+  .testi-role { font-size: 0.78rem; color: var(--textgrey); }
+
+  /* FAQ */
+  .faq-list { margin-top: 3rem; display: flex; flex-direction: column; gap: 1px; }
+  .faq-item {
+    border-bottom: 1px solid var(--midgrey);
+  }
+  .faq-q {
+    width: 100%; background: none; border: none; color: var(--white);
+    font-family: var(--font-body); font-size: 1rem; font-weight: 600;
+    text-align: left; padding: 1.25rem 0;
+    cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 1rem;
+    transition: color 0.2s;
+  }
+  .faq-q:hover { color: var(--green); }
+  .faq-icon { font-size: 1.25rem; color: var(--green); flex-shrink: 0; transition: transform 0.3s; }
+  .faq-a {
+    font-size: 0.95rem; color: var(--textgrey); line-height: 1.7;
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s;
+    padding-bottom: 0;
+  }
+  .faq-item.open .faq-a { max-height: 200px; padding-bottom: 1.25rem; }
+  .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+  /* BOOKING FORM */
+  .booking-form {
+    background: var(--grey);
+    border: 1px solid var(--midgrey);
+    border-radius: 12px;
+    padding: 3rem;
+    max-width: 720px;
+    margin: 3rem auto 0;
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .form-group { display: flex; flex-direction: column; gap: 8px; margin-bottom: 1.5rem; }
+  .form-group label {
+    font-size: 0.8rem; font-family: var(--font-mono);
+    letter-spacing: 1px; text-transform: uppercase; color: var(--textgrey);
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    background: var(--black);
+    border: 1px solid var(--midgrey);
+    border-radius: 4px;
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    padding: 12px 16px;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--green); }
+  .form-group select option { background: var(--black); }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+
+  /* PRICING */
+  .pricing-card {
+    background: var(--grey);
+    border: 2px solid var(--green);
+    border-radius: 12px;
+    padding: 3rem;
+    max-width: 480px;
+    margin: 3rem auto;
+    text-align: center;
+    position: relative;
+  }
+  .pricing-badge {
+    position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+    background: var(--green); color: var(--black);
+    font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 2px;
+    text-transform: uppercase; padding: 4px 16px; border-radius: 20px;
+    font-weight: 700;
+  }
+  .pricing-name {
+    font-family: var(--font-display); font-size: 2.5rem; letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+  }
+  .pricing-tagline { color: var(--textgrey); font-size: 0.95rem; margin-bottom: 2rem; }
+  .pricing-price {
+    font-family: var(--font-display); font-size: 4.5rem; color: var(--orange);
+    line-height: 1;
+  }
+  .pricing-currency {
+    font-family: var(--font-mono); font-size: 1.2rem; color: var(--textgrey);
+    vertical-align: super;
+  }
+  .pricing-period { font-size: 0.85rem; color: var(--textgrey); margin-bottom: 2.5rem; }
+  .pricing-features { list-style: none; text-align: left; margin-bottom: 2.5rem; display: flex; flex-direction: column; gap: 0.85rem; }
+  .pricing-features li {
+    display: flex; align-items: flex-start; gap: 0.75rem;
+    font-size: 0.95rem; color: var(--textgrey);
+  }
+  .pricing-features li::before {
+    content: '✓'; color: var(--green); font-weight: 700;
+    flex-shrink: 0; margin-top: 2px;
+  }
+
+  /* ABOUT */
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 4rem; align-items: center;
+    margin-top: 2rem;
+  }
+  .about-visual {
+    background: var(--grey);
+    border: 1px solid var(--midgrey);
+    border-radius: 12px;
+    padding: 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .about-emoji { font-size: 6rem; display: block; margin-bottom: 1.5rem; }
+  .about-quote {
+    font-family: var(--font-display); font-size: 1.8rem; letter-spacing: 1px;
+    color: var(--green); line-height: 1.2;
+  }
+  .about-quote-sub { font-size: 0.85rem; color: var(--textgrey); margin-top: 0.75rem; }
+  .about-values { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem; }
+  .value-item { display: flex; gap: 1rem; align-items: flex-start; }
+  .value-icon { font-size: 1.5rem; flex-shrink: 0; }
+  .value-title { font-weight: 700; font-size: 0.95rem; margin-bottom: 4px; }
+  .value-desc { font-size: 0.88rem; color: var(--textgrey); line-height: 1.6; }
+
+  /* GALLERY */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+  .gallery-item {
+    background: var(--grey);
+    border: 1px solid var(--midgrey);
+    border-radius: 8px;
+    aspect-ratio: 4/3;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 3rem;
+    position: relative; overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .gallery-item:hover { border-color: var(--cyan); transform: scale(1.02); }
+  .gallery-label {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.85));
+    padding: 1rem 0.75rem 0.75rem;
+    font-size: 0.8rem; font-family: var(--font-mono);
+    letter-spacing: 1px; text-transform: uppercase;
+    color: var(--textgrey); opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .gallery-item:hover .gallery-label { opacity: 1; }
+  .gallery-item.large { grid-column: span 2; }
+
+  /* CONTACT */
+  .contact-grid {
+    display: grid; grid-template-columns: 1fr 1.5fr;
+    gap: 3rem; margin-top: 3rem;
+  }
+  .contact-info { display: flex; flex-direction: column; gap: 2rem; }
+  .contact-item { display: flex; gap: 1rem; align-items: flex-start; }
+  .contact-icon {
+    width: 48px; height: 48px;
+    background: rgba(18,255,16,0.08);
+    border: 1px solid rgba(18,255,16,0.2);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.25rem; flex-shrink: 0;
+  }
+  .contact-label { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase; color: var(--textgrey); margin-bottom: 4px; }
+  .contact-value { font-size: 1rem; font-weight: 600; }
+  .contact-form { background: var(--grey); border: 1px solid var(--midgrey); border-radius: 12px; padding: 2.5rem; }
+
+  /* BLOG */
+  .blog-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem; margin-top: 3rem;
+  }
+  .blog-card {
+    background: var(--grey); border: 1px solid var(--midgrey);
+    border-radius: 8px; overflow: hidden; transition: border-color 0.3s, transform 0.3s;
+    cursor: pointer;
+  }
+  .blog-card:hover { border-color: var(--green); transform: translateY(-4px); }
+  .blog-thumb {
+    height: 180px; background: var(--midgrey);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 4rem;
+    border-bottom: 1px solid var(--midgrey);
+  }
+  .blog-content { padding: 1.5rem; }
+  .blog-cat {
+    font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--green); margin-bottom: 0.75rem;
+  }
+  .blog-title { font-weight: 700; font-size: 1rem; line-height: 1.4; margin-bottom: 0.75rem; }
+  .blog-excerpt { font-size: 0.88rem; color: var(--textgrey); line-height: 1.6; margin-bottom: 1rem; }
+  .blog-meta { font-size: 0.75rem; color: var(--textgrey); font-family: var(--font-mono); }
+
+  /* SHOP */
+  .shop-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem; margin-top: 3rem;
+  }
+  .product-card {
+    background: var(--grey); border: 1px solid var(--midgrey);
+    border-radius: 8px; overflow: hidden; transition: border-color 0.3s;
+  }
+  .product-card:hover { border-color: var(--orange); }
+  .product-thumb {
+    height: 200px; display: flex; align-items: center; justify-content: center;
+    font-size: 5rem; background: var(--black);
+    border-bottom: 1px solid var(--midgrey);
+  }
+  .product-info { padding: 1.5rem; }
+  .product-name { font-weight: 700; font-size: 1.05rem; margin-bottom: 0.5rem; }
+  .product-desc { font-size: 0.85rem; color: var(--textgrey); line-height: 1.6; margin-bottom: 1rem; }
+  .product-footer { display: flex; align-items: center; justify-content: space-between; }
+  .product-price { font-family: var(--font-display); font-size: 1.75rem; color: var(--orange); }
+  .product-buy {
+    background: var(--green); color: var(--black);
+    border: none; border-radius: 4px;
+    font-weight: 700; font-size: 0.8rem;
+    padding: 8px 16px; cursor: pointer;
+    text-transform: uppercase; letter-spacing: 1px;
+    transition: background 0.2s;
+  }
+  .product-buy:hover { background: var(--cyan); }
+
+  /* PORTFOLIO */
+  .portfolio-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem; margin-top: 3rem;
+  }
+  .portfolio-card {
+    background: var(--grey); border: 1px solid var(--midgrey);
+    border-radius: 8px; overflow: hidden;
+    cursor: pointer; transition: border-color 0.3s, transform 0.3s;
+  }
+  .portfolio-card:hover { border-color: var(--cyan); transform: translateY(-4px); }
+  .portfolio-thumb {
+    height: 220px; display: flex; align-items: center; justify-content: center;
+    font-size: 5rem; background: var(--black);
+    position: relative; overflow: hidden;
+  }
+  .portfolio-overlay {
+    position: absolute; inset: 0;
+    background: rgba(18,255,16,0.06);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .portfolio-card:hover .portfolio-overlay { opacity: 1; }
+  .portfolio-info { padding: 1.5rem; }
+  .portfolio-type { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 2px; text-transform: uppercase; color: var(--cyan); margin-bottom: 0.5rem; }
+  .portfolio-title { font-weight: 700; font-size: 1.05rem; margin-bottom: 0.5rem; }
+  .portfolio-desc { font-size: 0.85rem; color: var(--textgrey); line-height: 1.6; }
+
+  /* FOOTER */
+  footer {
+    background: var(--grey);
+    border-top: 1px solid var(--midgrey);
+    padding: 4rem 0 2rem;
+  }
+  .footer-grid {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem; margin-bottom: 3rem;
+  }
+  .footer-brand {}
+  .footer-logo { font-family: var(--font-display); font-size: 1.75rem; letter-spacing: 2px; margin-bottom: 1rem; }
+  .footer-logo span { color: var(--green); }
+  .footer-tagline { font-size: 0.9rem; color: var(--textgrey); line-height: 1.6; max-width: 280px; }
+  .footer-col-title { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: var(--green); margin-bottom: 1.25rem; }
+  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+  .footer-links li a { font-size: 0.9rem; color: var(--textgrey); transition: color 0.2s; cursor: pointer; }
+  .footer-links li a:hover { color: var(--white); }
+  .footer-bottom {
+    border-top: 1px solid var(--midgrey);
+    padding-top: 2rem;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-copy { font-size: 0.82rem; color: var(--textgrey); }
+  .footer-made { font-size: 0.78rem; color: var(--textgrey); font-family: var(--font-mono); }
+  .footer-made a { color: var(--green); }
+
+  /* WHATSAPP FLOAT */
+  .whatsapp-float {
+    position: fixed; bottom: 24px; right: 24px; z-index: 999;
+    width: 56px; height: 56px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+  }
+  .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.6); }
+  .whatsapp-float svg { width: 28px; height: 28px; fill: white; }
+
+  /* SUCCESS TOAST */
+  .toast {
+    position: fixed; bottom: 100px; right: 24px; z-index: 9999;
+    background: var(--green); color: var(--black);
+    padding: 12px 20px; border-radius: 6px;
+    font-weight: 700; font-size: 0.9rem;
+    transform: translateX(200%); opacity: 0;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .toast.show { transform: translateX(0); opacity: 1; }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-visual { display: none; }
+    .about-grid { grid-template-columns: 1fr; }
+    .service-feature { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .gallery-item.large { grid-column: span 1; }
+  }
+  @media (max-width: 700px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .form-row { grid-template-columns: 1fr; }
+    .hero-title { font-size: 3.2rem; }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+    .section { padding: 70px 0; }
+  }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .fade-in { animation: fadeInUp 0.6s ease forwards; }
+  .fade-in-delay-1 { animation: fadeInUp 0.6s ease 0.15s forwards; opacity: 0; }
+  .fade-in-delay-2 { animation: fadeInUp 0.6s ease 0.3s forwards; opacity: 0; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════ NAVBAR ══════════ -->
+<nav>
+  <div class="nav-logo" onclick="showPage('home')">BREAKUP<span>™</span></div>
+  <ul class="nav-links">
+    <li><a onclick="showPage('home')" class="active" id="nav-home">Home</a></li>
+    <li><a onclick="showPage('about')" id="nav-about">About</a></li>
+    <li><a onclick="showPage('services')" id="nav-services">Services</a></li>
+    <li><a onclick="showPage('pricing')" id="nav-pricing">Pricing</a></li>
+    <li><a onclick="showPage('portfolio')" id="nav-portfolio">Portfolio</a></li>
+    <li><a onclick="showPage('blog')" id="nav-blog">Blog</a></li>
+    <li><a onclick="showPage('faq')" id="nav-faq">FAQ</a></li>
+    <li><a onclick="showPage('booking')" id="nav-booking">Book Now</a></li>
+    <li><a onclick="showPage('contact')" id="nav-contact">Contact</a></li>
+    <li><a onclick="showPage('shop')" id="nav-shop" class="nav-cta">Shop</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMobile()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a onclick="showPage('home');toggleMobile()">Home</a>
+  <a onclick="showPage('about');toggleMobile()">About</a>
+  <a onclick="showPage('services');toggleMobile()">Services</a>
+  <a onclick="showPage('pricing');toggleMobile()">Pricing</a>
+  <a onclick="showPage('gallery');toggleMobile()">Gallery</a>
+  <a onclick="showPage('testimonials');toggleMobile()">Testimonials</a>
+  <a onclick="showPage('portfolio');toggleMobile()">Portfolio</a>
+  <a onclick="showPage('blog');toggleMobile()">Blog</a>
+  <a onclick="showPage('faq');toggleMobile()">FAQ</a>
+  <a onclick="showPage('booking');toggleMobile()">Booking</a>
+  <a onclick="showPage('contact');toggleMobile()">Contact</a>
+  <a onclick="showPage('shop');toggleMobile()">Shop</a>
+</div>
+
+<!-- ═══════════════════════════════════════════
+  PAGE: HOME
+═══════════════════════════════════════════ -->
+<div class="page active" id="page-home">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid-lines"></div>
+    <div class="hero-inner">
+      <div>
+        <p class="hero-eyebrow fade-in">Mumbai · Worldwide · Est. 2024</p>
+        <h1 class="hero-title fade-in-delay-1">
+          <span class="line-break">SAY IT</span>
+          <span class="line-break struck">YOURSELF</span>
+          <span class="line-break highlight">WITH US</span>
+        </h1>
+        <p class="hero-desc fade-in-delay-2">
+          Ending a relationship shouldn't end your dignity. Breakup Delivery™ crafts and delivers your message with clarity, creativity, and zero awkward eye contact required.
+        </p>
+        <div class="hero-actions fade-in-delay-2">
+          <button class="btn btn-primary" onclick="showPage('booking')">Book a Delivery</button>
+          <button class="btn btn-outline" onclick="showPage('services')">See How It Works</button>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-num">2K+</div>
+            <div class="stat-label">Delivered</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">98%</div>
+            <div class="stat-label">Satisfaction</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">0</div>
+            <div class="stat-label">Regretted</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="thread-container">
+          <div class="thread-glow"></div>
+          <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Heart outline, broken -->
+            <path d="M200 320 C200 320 60 220 60 130 C60 80 100 55 140 60 C165 63 185 80 200 100 C215 80 235 63 260 60 C300 55 340 80 340 130 C340 220 200 320 200 320Z" stroke="#12FF10" stroke-width="2" fill="none" stroke-dasharray="6 3" opacity="0.3"/>
+            <!-- Left half heart (whole) -->
+            <path d="M200 310 C200 310 65 215 65 128 C65 82 103 58 142 63 C167 66 187 82 200 102" stroke="#12FF10" stroke-width="2.5" fill="none"/>
+            <!-- Right half heart (fading) -->
+            <path d="M200 102 C213 82 233 66 258 63 C297 58 335 82 335 128 C335 215 200 310 200 310" stroke="#2AFFFC" stroke-width="2.5" fill="none" stroke-dasharray="8 4"/>
+            <!-- Break line -->
+            <line x1="200" y1="95" x2="200" y2="320" stroke="#FF9B4C" stroke-width="1.5" stroke-dasharray="5 5" opacity="0.6"/>
+            <!-- Scissors -->
+            <text x="178" y="215" font-size="36" style="animation: snip 2s ease-in-out infinite;">✂️</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-section" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="marquee-item">It's Not You, It's Us <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Professional Goodbyes <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Worldwide Delivery <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">100% Confidential <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">No Awkward Eye Contact <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">It's Not You, It's Us <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Professional Goodbyes <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Worldwide Delivery <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">100% Confidential <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">No Awkward Eye Contact <span class="marquee-dot">✦</span></span>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <section class="section">
+    <div class="container">
+      <p class="section-label">The Process</p>
+      <h2 class="section-title">How It <span class="highlight">Works</span></h2>
+      <p class="section-sub">Three simple steps between you and your closure. We handle the uncomfortable part.</p>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <div class="step-icon">📋</div>
+          <div class="step-title">Tell Us Everything</div>
+          <p class="step-desc">Fill in your booking form with the details, the tone you want, and any personal touches. The more context, the better we deliver.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <div class="step-icon">✍️</div>
+          <div class="step-title">We Craft the Message</div>
+          <p class="step-desc">Our writers build a personalized, clear message tailored to your situation. Serious, humorous, dramatic — your call.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <div class="step-icon">📦</div>
+          <div class="step-title">We Deliver It</div>
+          <p class="step-desc">The message is delivered with care and professionalism. You receive a confirmation. They receive closure. Everyone moves on.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">4</div>
+          <div class="step-icon">🌅</div>
+          <div class="step-title">You Move Forward</div>
+          <p class="step-desc">Full privacy. Zero awkwardness. Your name stays out of the delivery if you want. Your dignity stays intact regardless.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="divider"></div>
+
+  <!-- FEATURED SERVICE -->
+  <section class="section">
+    <div class="container">
+      <p class="section-label">Featured Package</p>
+      <h2 class="section-title">The <span class="highlight">Signature</span></h2>
+      <div class="service-feature">
+        <div>
+          <div class="service-badge">Most Popular</div>
+          <div class="service-name">The Clean Break</div>
+          <p class="service-desc">Our flagship service. A professionally written, personally tailored breakup message delivered with precision and discretion. Includes custom tone selection, personalized message drafting, proof review, scheduled delivery, and full anonymity options.</p>
+          <br/>
+          <button class="btn btn-primary" onclick="showPage('booking')">Book This Package</button>
+          <button class="btn btn-outline" style="margin-left:1rem" onclick="showPage('pricing')">View All Details</button>
+        </div>
+        <div class="service-price-box">
+          <div class="service-price"><span style="font-size:1.5rem;color:var(--textgrey);">₹</span>69,000</div>
+          <div class="service-price-label">per delivery</div>
+          <br/>
+          <a href="https://wa.me/918879100622?text=Hi, I'm interested in The Clean Break package" target="_blank" class="btn btn-outline" style="font-size:0.8rem;padding:10px 18px;">💬 WhatsApp Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="divider"></div>
+
+  <!-- TESTIMONIALS PREVIEW -->
+  <section class="section">
+    <div class="container">
+      <p class="section-label">What They Said</p>
+      <h2 class="section-title">Closure, <span class="highlight-cyan">Delivered</span></h2>
+      <div class="testimonials-grid">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">I'd been avoiding the conversation for three months. Breakup Delivery sorted it out in 48 hours. My ex got the message, I got my peace. 10/10 would use again (but hopefully won't need to).</p>
+          <div class="testi-author">Priya R.</div>
+          <div class="testi-role">Mumbai · The Clean Break</div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">Genuinely surprised at how professional this is. They wrote something I couldn't have written in a million years. Thoughtful, clear, and actually kind. No drama. Just done.</p>
+          <div class="testi-author">Arjun M.</div>
+          <div class="testi-role">Bangalore · The Clean Break</div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★☆</div>
+          <p class="testi-text">Used this for a situationship that had gone on way too long. The message was perfect. Absolutely no way I could've done it with this much grace on my own.</p>
+          <div class="testi-author">Sara K.</div>
+          <div class="testi-role">Dubai · The Clean Break</div>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:2.5rem">
+        <button class="btn btn-outline" onclick="showPage('testimonials')">Read All Reviews</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section style="background: linear-gradient(135deg, rgba(18,255,16,0.06) 0%, rgba(42,255,252,0.04) 100%); border-top: 1px solid rgba(18,255,16,0.12); border-bottom: 1px solid rgba(18,255,16,0.12); padding: 80px 0; text-align:center;">
+    <div class="container">
+      <p class="section-label" style="text-align:center">Ready?</p>
+      <h2 class="section-title" style="text-align:center">Stop Delaying the <span class="highlight">Inevitable</span></h2>
+      <p class="section-sub" style="text-align:center;margin:0 auto 2.5rem">Every day you wait is another day of awkward text-avoidance. Let's end this — professionally.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+        <button class="btn btn-primary" onclick="showPage('booking')">Book a Delivery Now</button>
+        <a href="https://wa.me/918879100622?text=Hi, I need help with a breakup delivery" target="_blank" class="btn btn-orange">💬 WhatsApp Us</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════════
+  PAGE: ABOUT
+═══════════════════════════════════════════ -->
+<div class="page" id="page-about">
+  <div class="page-content">
+    <section class="section">
+      <div class="container">
+        <div class="tag">Our Story</div>
+        <h1 class="section-title">We Exist Because <span class="highlight">Breakups Are Hard</span></h1>
+        <div class="about-grid">
+          <div>
+            <p class="section-sub">Breakup Delivery™ was born from a simple truth: ending relationships is one of the most emotionally charged, communication-heavy things a human being can do — and almost nobody is equipped to do it well.</p>
+            <p style="color:var(--textgrey);font-size:0.95rem;line-height:1.7;margin-bottom:1.5rem">We're not here to judge why you're ending things. We're here to make sure that when you do, it's handled with honesty, dignity, and clarity — for both parties involved.</p>
+            <p style="color:var(--textgrey);font-size:0.95rem;line-height:1.7;margin-bottom:2rem">Our team of writers, relationship communication specialists, and delivery professionals have helped over 2,000 people navigate one of life's most uncomfortable moments. We've seen it all — long-distance situations, situationships, serious multi-year relationships, and everything in between.</p>
+            <div class="about-values">
+              <div class="value-item">
+                <div class="value-icon">🔒</div>
+                <div>
+                  <div class="value-title">Total Confidentiality</div>
+                  <div class="value-desc">Your identity stays protected at every stage. We never share client data, period.</div>
+                </div>
+              </div>
+              <div class="value-item">
+                <div class="value-icon">✍️</div>
+                <div>
+                  <div class="value-title">Human-Written, Always</div>
+                  <div class="value-desc">Every message is crafted by a real writer who reads your situation carefully before putting a single word down.</div>
+                </div>
+              </div>
+              <div class="value-item">
+                <div class="value-icon">🌍</div>
+                <div>
+                  <div class="value-title">Global Reach</div>
+                  <div class="value-desc">We operate across timezones and borders. Wherever you are, wherever they are — we deliver.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about-visual">
+            <span class="about-emoji">✂️💌</span>
+            <div class="about-quote">"WE SAY IT SO YOU DON'T HAVE TO"</div>
+            <div class="about-quote-sub">— Breakup Delivery™ founding principle</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+  PAGE: SERVICES
+═══════════════════════════════════════════ -->
+<div class="page" id="page-services">
+  <div class="page-content">
+    <section class="section">
+      <div class="container">
+        <div class="tag">What We Offer</div>
+        <h1 class="section-title">Our <span class="highlight">Services</span></h1>
+        <p class="section-sub">One core service, done exceptionally well. The Clean Break is everything you need.</p>
+        <div class="service-feature" style="max-width:100%">
+          <div>
+            <div class="service-badge">Flagship Package</div>
+            <div class="service-name">The Clean Break</div>
+            <p class="service-desc" style="max-width:600px">End things clearly, kindly, and without the drama. The Clean Break includes everything from a 30-minute intake session to understand your situation, through to a fully personalized message crafted in your chosen tone, delivered on your schedule via your preferred channel.</p>
+            <br/>
+            <ul style="color:var(--textgrey);font-size:0.9rem;line-height:1.8;padding-left:1.25rem;margin-bottom:1.5rem">
+              <li>In-depth intake form to understand your situation</li>
+              <li>Custom-written message — not a template</li>
+              <li>Tone selection: Formal, empathetic, humorous, or direct</li>
+              <li>Pre-delivery review — you approve before we send</li>
+              <li>Multi-channel delivery: email, letter, SMS, or in-person handoff</li>
+              <li>Full anonymity option available</li>
+              <li>Post-delivery confirmation and closure report</li>
+            </ul>
+            <button class="btn btn-primary" onclick="showPage('booking')">Book Now — ₹69,000</button>
+          </div>
+          <div class="service-price-box">
+            <div class="service-price"><span style="font-size:1.5rem;color:var(--textgrey);">₹</span>69,000</div>
+            <div class="service-price-label">flat rate, all inclusive</div>
+          </div>
+        </div>
+        <div class="section" style="padding:60px 0 0">
+          <p class="section-label">Also Included</p>
+          <h2 class="section-title" style="font-size:2.5rem">Every Order Gets <span class="highlight-cyan">This</span></h2>
+          <div class="steps-grid" style="margin-top:2rem">
+            <div class="card">
+              <div style="font-size:2rem;margin-bottom:1rem">📞</div>
+              <div class="step-title">Intake Consultation</div>
+              <p class="step-desc">A private intake session to understand your situation before we write a single word.</p>
+            </div>
+            <div class="card">
+              <div style="font-size:2rem;margin-bottom:1rem">✍️</div>
+              <div class="step-title">Custom Copywriting</div>
+              <p class="step-desc">Real writers. Real words. No templates, no AI-generated filler.</p>
+            </div>
+            <div class="card">
+              <div style="font-size:2rem;margin-bottom:1rem">👁️</div>
+              <div class="step-title">Client Review</div>
+              <p class="step-desc">You read it, you approve it, we send it. One revision round included.</p>
+            </div>
+            <div class="card">
+              <div style="font-size:2rem;margin-bottom:1rem">📬</div>
+              <div class="step-title">Confirmed Delivery</div>
+              <p class="step-desc">We confirm delivery and send you a closure report. You know when they know.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+  PAGE: PRICING
+═══════════════════════════════════════════ -->
+<div class="page" id="page-pricing">
+  <div class="page-content">
+    <section class="section">
+      <div class="container" style="text-align:center">
+        <div class="tag">Transparent Pricing</div>
+        <h1 class="section-title">One Price. <span class="highlight">No Surprises.</span></h1>
+        <p class="section-sub" style="margin:0 auto 1rem">We keep it simple because the situation is already complicated enough.</p>
+        <div class="pricing-card">
+          <div class="pricing-badge">Only Option You Need</div>
+          <div class="pricing-name">THE CLEAN BREAK</div>
+          <div class="pricing-tagline">Our complete professional breakup delivery package</div>
+          <div class="pricing-price"><span class="pricing-currency">₹</span>69,000</div>
+          <div class="pricing-period">Flat rate · No hidden fees · All-inclusive</div>
+          <ul class="pricing-features">
+            <li>Private intake consultation</li>
+            <li>Human-written custom message</li>
+            <li>Tone selection (formal / empathetic / humorous / direct)</li>
+            <li>Client review + one revision round</li>
+            <li>Delivery via email, letter, SMS, or in-person</li>
+            <li>Full anonymity option</li>
+            <li>Delivery confirmation + closure report</li>
+            <li>100% privacy & confidentiality guarantee</li>
+          </ul>
+          <button class="btn btn-primary" style="width:100%" onclick="showPage('booking')">Book Your Delivery</button>
+          <br/><br/>
+          <a href="https://wa.me/918879100622?text=Hi, I'd like to know more about The Clean Break" target="_blank" class="btn btn-outline" style="width:100%">WhatsApp a Question First</a>
+        </div>
+        <p style="color:var(--textgrey);font-size:0.85rem;margin-top:1rem">Payment via UPI · Bank Transfer · International cards accepted</p>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+  PAGE: TESTIMONIALS
+═══════════════════════════════════════════ -->
+<div class="page" id="page-testimonials">
+  <div class="page-content">
+    <section class="section">
+      <div class="container">
+        <div class="tag">Client Reviews</div>
+        <h1 class="section-title">Real People. <span class="highlight">Real Closure.</span></h1>
+        <p class="section-sub">Every testimonial is from a real client. Names and identifying details changed for privacy.</p>
+        <div class="testimonials-grid">
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">I'd been avoiding the conversation for three months. Breakup Delivery sorted it out in 48 hours. My ex got the message, I got my peace.</p>
+            <div class="testi-author">Priya R.</div>
+            <div class="testi-role">Mumbai · The Clean Break</div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">Genuinely surprised at how professional this is. They wrote something I couldn't have written in a million years. No drama. Just done.</p>
+            <div class="testi-author">Arjun M.</div>
+            <div class="testi-role">Bangalore · The Clean Break</div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★☆</div>
+            <p class="testi-text">Used this for a situationship that had gone on way too long. The message was perfect — kind, firm, clear. Worth every rupee.</p>
+            <div class="testi-author">Sara K.</div>
+            <div class="testi-role">Dubai · The Clean Break</div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">My therapist had been telling me to end things for months. I finally used Breakup Delivery and honestly it was the most adult thing I've done all year.</p>
+            <div class="testi-author">Rohan T.</div>
+            <div class="testi-role">Pune · The Clean Break</div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">International delivery, different timezone, and they pulled it off flawlessly. My ex in London received the message exactly when I asked them to.</p>
+            <div class="testi-author">Divya P.</div>
+            <div class="testi-role">Hyderabad → London · The Clean Break</div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">I didn't want to ghost, but I also couldn't face the conversation. This was the exact middle ground I needed. Professional, humane, and effective.</p>
+            <div class="testi-author">Kai S.</div>
+            <div class="testi-role">Singapore · The Clean Break</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+  PAGE: FAQ
+═══════════════════════════════════════════ -->
+<div class="page" id="page-faq">
+  <div class="page-content">
+    <section class="section">
+      <div class="container">
+        <div class="tag">FAQ</div>
+        <h1 class="section-title">You Asked. <span class="highlight">We Answered.</span></h1>
+        <p class="section-sub">The questions people are too embarrassed to ask — but absolutely should.</p>
+        <div class="faq-list" style="max-width:760px">
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              Is this actually legal? <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">Completely. We are a communication service. We draft and deliver a message on your behalf — the same way a lawyer writes a letter or a PR firm crafts a press release. There is nothing illegal about having a professional communicate for you.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              Will my ex know I used a service? <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">Only if you want them to. We offer full anonymity options — the message can come from a neutral source with no identifiable connection to us. Your name, your involvement, your privacy: all protected.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              What if my situation is complicated? <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">That's literally why we exist. Simple breakups don't need a service. We specialize in the complicated ones — long-distance situations, cohabitation, family involvement, workplace relationships, international deliveries. Bring us the mess.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              How is the message delivered? <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">You choose. Options include a handwritten letter, email, SMS, or an in-person handoff in Mumbai. International deliveries are handled via verified digital channels with delivery confirmation.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              Can I review the message before it's sent? <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">Always. You will receive the drafted message for review and have one round of revision included. Nothing goes out until you approve it.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              What's the turnaround time? <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">Standard delivery: 48–72 hours from intake to delivery. Express options may be available — WhatsApp us to discuss your timeline.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              What if my ex responds or wants to talk? <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">We include guidance on managing responses as part of the package. We can also optionally handle a single follow-up communication. We can't force them to accept it gracefully, but we can give them the clearest possible message to respond to.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              Is my payment and personal information secure? <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">Yes. We handle all payments via secure encrypted channels and store no personal data beyond what is operationally necessary. After delivery, client files are archived and access-restricted.</div>
+          </div>
+        </div>
+        <div style="margin-top:3rem;padding:2rem;background:var(--grey);border:1px solid var(--midgrey);border-radius:8px;max-width:760px">
+          <p style="font-size:0.95rem;color:var(--textgrey)">Still have questions? We're available 9am–9pm IST.</p>
+          <div style="display:flex;gap:1rem;margin-top:1.25rem;flex-wrap:wrap">
+            <a href="https://wa.me/918879100622" target="_blank" class="btn btn-primary">WhatsApp Us</a>
+            <button class="btn btn-outline" onclick="showPage('contact')">Contact Form</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+  PAGE: CONTACT
+═══════════════════════════════════════════ -->
+<div class="page" id="page-contact">
+  <div class="page-content">
+    <section class="section">
+      <div class="container">
+        <div class="tag">Get In Touch</div>
+        <h1 class="section-title">Let's <span class="highlight">Talk</span></h1>
+        <p class="section-sub">Questions, enquiries, or just need to talk through your situation before booking. We're here.</p>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">📱</div>
+              <div>
+                <div class="contact-label">Phone / WhatsApp</div>
+                <div class="contact-value">+91 88791 00622</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📧</div>
+              <div>
+                <div class="contact-label">Email</div>
+                <div class="contact-value">taizunboot@gmail.com</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div>
+                <div class="contact-label">Based In</div>
+                <div class="contact-value">Mumbai, India</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">🌍</div>
+              <div>
+                <div class="contact-label">We Serve</div>
+                <div class="contact-value">Worldwide</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">🕐</div>
+              <div>
+                <div class="contact-label">Working Hours</div>
+                <div class="contact-value">9am – 9pm IST, Mon–Sat</div>
+              </div>
+            </div>
+            <a href="https://wa.me/918879100622?text=Hi, I'd like to enquire about Breakup Delivery" target="_blank" class="btn btn-primary" style="display:inline-flex;align-items:center;gap:0.5rem;margin-top:0.5rem">
+              💬 Start on WhatsApp
+            </a>
+          </div>
+          <div class="contact-form">
+            <h3 style="font-family:var(--font-display);font-size:1.8rem;margin-bottom:1.75rem;letter-spacing:1px">Send a <span class="highlight">Message</span></h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Your Name</label>
+                <input type="text" placeholder="First name only is fine"/>
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" placeholder="your@email.com"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Subject</label>
+              <select>
+                <option>General Enquiry</option>
+                <option>Booking Question</option>
+                <option>Pricing</option>
+                <option>Something Else</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea placeholder="Tell us what you're dealing with. The more detail, the better we can help." style="min-height:130px"></textarea>
+            </div>
+            <button class="btn btn-primary" style="width:100%" onclick="submitForm()">Send Message</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+  PAGE: GALLERY
+═══════════════════════════════════════════ -->
+<div class="page" id="page-gallery">
+  <div class="page-content">
+    <section class="section">
+      <div class="container">
+        <div class="tag">Gallery</div>
+        <h1 class="section-title">The <span class="highlight">Process</span> Visualized</h1>
+        <p class="section-sub">A look at the care and craft that goes into every delivery.</p>
+        <div class="gallery-grid">
+          <div class="gallery-item large">
+            <span>✍️</span>
+            <div class="gallery-label">The Writing Studio</div>
+          </div>
+          <div class="gallery-item">
+            <span>📬</span>
+            <div class="gallery-label">Letters Ready</div>
+          </div>
+          <div class="gallery-item">
+            <span>💌</span>
+            <div class="gallery-label">Handwritten Notes</div>
+          </div>
+          <div class="gallery-item">
+            <span>🔒</span>
+            <div class="gallery-label">Privacy First</div>
+          </div>
+          <div class="gallery-item large">
+            <span>🌏</span>
+            <div class="gallery-label">Global Deliveries</div>
+          </div>
+          <div class="gallery-item">
+            <span>📦</span>
+            <div class="gallery-label">Premium Packaging</div>
+          </div>
+          <div class="gallery-item">
+            <span>🕊️</span>
+            <div class="gallery-label">Closure</div>
+          </div>
+          <div class="gallery-item">
+            <span>⭐</span>
+            <div class="gallery-label">5-Star Service</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+  PAGE: BLOG
+═══════════════════════════════════════════ -->
+<div class="page" id="page-blog">
+  <div class="page-content">
+    <section class="section">
+      <div class="container">
+        <div class="tag">The Breakup Blog</div>
+        <h1 class="section-title">Thoughts on <span class="highlight">Endings</span></h1>
+        <p class="section-sub">Honest writing about relationships, communication, and why closure is actually a skill.</p>
+        <div class="blog-grid">
+          <div class="blog-card">
+            <div class="blog-thumb">💔</div>
+            <div class="blog-content">
+              <div class="blog-cat">Relationships</div>
+              <div class="blog-title">Why Ghosting Is Never the Answer (And What to Do Instead)</div>
+              <div class="blog-excerpt">We look at why people ghost, why it damages both parties, and what a clear, respectful ending actually looks like in practice.</div>
+              <div class="blog-meta">June 12, 2026 · 6 min read</div>
+            </div>
+          </div>
+          <div class="blog-card">
+            <div class="blog-thumb">📝</div>
+            <div class="blog-content">
+              <div class="blog-cat">Communication</div>
+              <div class="blog-title">The Art of the Breakup Message: What Works and What Destroys People</div>
+              <div class="blog-excerpt">Our writers break down what makes a breakup message land well — and the common mistakes that turn a difficult moment into a catastrophe.</div>
+              <div class="blog-meta">May 28, 2026 · 8 min read</div>
+            </div>
+          </div>
+          <div class="blog-card">
+            <div class="blog-thumb">🌱</div>
+            <div class="blog-content">
+              <div class="blog-cat">Closure</div>
+              <div class="blog-title">Closure Is Not Given — It's Taken. Here's How.</div>
+              <div class="blog-excerpt">Most people wait for closure to arrive. We argue that closure is something you create through clear, intentional communication — not something the other person hands you.</div>
+              <div class="blog-meta">May 15, 2026 · 5 min read</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+  PAGE: BOOKING
+═══════════════════════════════════════════ -->
+<div class="page" id="page-booking">
+  <div class="page-content">
+    <section class="section">
+      <div class="container">
+        <div class="tag">Book a Delivery</div>
+        <h1 class="section-title">Time to <span class="highlight">End This</span></h1>
+        <p class="section-sub">Fill in the form below. We'll review your situation and confirm your booking within 24 hours.</p>
+        <div class="booking-form">
+          <h3 style="font-family:var(--font-display);font-size:2rem;letter-spacing:1px;margin-bottom:2rem">The Clean Break — <span class="highlight-orange">₹69,000</span></h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" placeholder="How should we address you?"/>
+            </div>
+            <div class="form-group">
+              <label>Your Email</label>
+              <input type="email" placeholder="For confirmation & updates"/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Phone / WhatsApp</label>
+              <input type="tel" placeholder="+91 or international"/>
+            </div>
+            <div class="form-group">
+              <label>Preferred Tone</label>
+              <select>
+                <option>Empathetic & Kind</option>
+                <option>Direct & Clear</option>
+                <option>Formal & Professional</option>
+                <option>Light & Humorous</option>
+                <option>Serious & Final</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Delivery Method</label>
+              <select>
+                <option>Email</option>
+                <option>Handwritten Letter</option>
+                <option>SMS / WhatsApp</option>
+                <option>In-Person (Mumbai only)</option>
+                <option>Unsure — advise me</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Preferred Delivery Date</label>
+              <input type="date"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Anonymity Preference</label>
+            <select>
+              <option>Full Anonymity — don't reveal I used a service</option>
+              <option>Transparent — they can know I used Breakup Delivery</option>
+              <option>Neutral — just send it, no mention either way</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Tell Us the Full Situation</label>
+            <textarea style="min-height:140px" placeholder="How long were you together? What's the core reason? Any context we should know? The more you share, the better the message we write."></textarea>
+          </div>
+          <div class="form-group">
+            <label>Anything We Should Avoid Saying</label>
+            <textarea placeholder="Topics, references, or phrases we should steer clear of."></textarea>
+          </div>
+          <button class="btn btn-primary" style="width:100%;font-size:1rem;padding:16px" onclick="submitForm()">Submit Booking Request</button>
+          <p style="text-align:center;margin-top:1rem;font-size:0.82rem;color:var(--textgrey)">We'll confirm within 24 hours. No payment collected until you approve the drafted message.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+  PAGE: PORTFOLIO
+═══════════════════════════════════════════ -->
+<div class="page" id="page-portfolio">
+  <div class="page-content">
+    <section class="section">
+      <div class="container">
+        <div class="tag">Our Work</div>
+        <h1 class="section-title">Deliveries We're <span class="highlight">Proud Of</span></h1>
+        <p class="section-sub">Anonymized case studies. Real situations. Real outcomes.</p>
+        <div class="portfolio-grid">
+          <div class="portfolio-card">
+            <div class="portfolio-thumb">
+              💌
+              <div class="portfolio-overlay" style="font-family:var(--font-display);font-size:1.2rem;color:var(--green);letter-spacing:2px">VIEW CASE</div>
+            </div>
+            <div class="portfolio-info">
+              <div class="portfolio-type">Long Distance · 2 Years</div>
+              <div class="portfolio-title">The Mumbai-London Situation</div>
+              <p class="portfolio-desc">A 2-year long-distance relationship needed a clear, respectful ending. We crafted a message that acknowledged the effort both parties made while drawing a clear line.</p>
+            </div>
+          </div>
+          <div class="portfolio-card">
+            <div class="portfolio-thumb">
+              🪢
+              <div class="portfolio-overlay" style="font-family:var(--font-display);font-size:1.2rem;color:var(--green);letter-spacing:2px">VIEW CASE</div>
+            </div>
+            <div class="portfolio-info">
+              <div class="portfolio-type">Situationship · 8 Months</div>
+              <div class="portfolio-title">Defining the Undefined</div>
+              <p class="portfolio-desc">Ending something that was never officially defined is harder than ending a relationship. We found the language for it.</p>
+            </div>
+          </div>
+          <div class="portfolio-card">
+            <div class="portfolio-thumb">
+              🏢
+              <div class="portfolio-overlay" style="font-family:var(--font-display);font-size:1.2rem;color:var(--green);letter-spacing:2px">VIEW CASE</div>
+            </div>
+            <div class="portfolio-info">
+              <div class="portfolio-type">Workplace Complication · 6 Months</div>
+              <div class="portfolio-title">Keeping It Professional</div>
+              <p class="portfolio-desc">When the person you need to end things with sits three desks away, tone and timing matter more than ever. We navigated this with extreme care.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+  PAGE: SHOP
+═══════════════════════════════════════════ -->
+<div class="page" id="page-shop">
+  <div class="page-content">
+    <section class="section">
+      <div class="container">
+        <div class="tag">Shop</div>
+        <h1 class="section-title">Closure, <span class="highlight">On Demand</span></h1>
+        <p class="section-sub">Self-service products for those who know what they need.</p>
+        <div class="shop-grid">
+          <div class="product-card">
+            <div class="product-thumb">📝</div>
+            <div class="product-info">
+              <div class="product-name">The Clean Break — Full Service</div>
+              <p class="product-desc">Complete breakup delivery package including intake, custom writing, review, and delivery. Our flagship.</p>
+              <div class="product-footer">
+                <div class="product-price"><span style="font-size:1rem;color:var(--textgrey)">₹</span>69,000</div>
+                <button class="product-buy" onclick="showPage('booking')">Book Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-thumb">📖</div>
+            <div class="product-info">
+              <div class="product-name">The Breakup Script Guide</div>
+              <p class="product-desc">A downloadable guide with 40+ real-world message frameworks organized by relationship type and situation.</p>
+              <div class="product-footer">
+                <div class="product-price"><span style="font-size:1rem;color:var(--textgrey)">₹</span>999</div>
+                <button class="product-buy" onclick="submitForm()">Buy Guide</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-thumb">💬</div>
+            <div class="product-info">
+              <div class="product-name">15-Min Clarity Call</div>
+              <p class="product-desc">Not sure what you need? Book a private 15-minute consultation with one of our specialists. No commitment required.</p>
+              <div class="product-footer">
+                <div class="product-price"><span style="font-size:1rem;color:var(--textgrey)">₹</span>1,499</div>
+                <button class="product-buy" onclick="showPage('booking')">Book Call</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">BREAKUP<span>™</span></div>
+        <p class="footer-tagline">Professional breakup message delivery. We say it so you don't have to. Based in Mumbai. Operating worldwide.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Pages</div>
+        <ul class="footer-links">
+          <li><a onclick="showPage('home')">Home</a></li>
+          <li><a onclick="showPage('about')">About</a></li>
+          <li><a onclick="showPage('services')">Services</a></li>
+          <li><a onclick="showPage('pricing')">Pricing</a></li>
+          <li><a onclick="showPage('gallery')">Gallery</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">More</div>
+        <ul class="footer-links">
+          <li><a onclick="showPage('testimonials')">Testimonials</a></li>
+          <li><a onclick="showPage('portfolio')">Portfolio</a></li>
+          <li><a onclick="showPage('blog')">Blog</a></li>
+          <li><a onclick="showPage('faq')">FAQ</a></li>
+          <li><a onclick="showPage('shop')">Shop</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <ul class="footer-links">
+          <li><a href="tel:+918879100622">+91 88791 00622</a></li>
+          <li><a href="https://wa.me/918879100622" target="_blank">WhatsApp</a></li>
+          <li><a href="mailto:taizunboot@gmail.com">taizunboot@gmail.com</a></li>
+          <li><a onclick="showPage('booking')">Book a Delivery</a></li>
+          <li><a onclick="showPage('contact')">Contact Form</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Breakup Delivery™. All rights reserved. Based in Mumbai, India.</div>
+      <div class="footer-made">Built by <a href="https://northstarweb.co" target="_blank">Northstar Web ↗</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a class="whatsapp-float" href="https://wa.me/918879100622?text=Hi, I'm interested in Breakup Delivery" target="_blank" aria-label="WhatsApp Breakup Delivery">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- TOAST -->
+<div class="toast" id="toast">✓ Message sent! We'll be in touch within 24 hours.</div>
+
+<script>
+// ─── PAGE NAVIGATION ───
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+
+  const page = document.getElementById('page-' + id);
+  if (page) page.classList.add('active');
+
+  const navEl = document.getElementById('nav-' + id);
+  if (navEl) navEl.classList.add('active');
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ─── MOBILE MENU ───
+function toggleMobile() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+// ─── FAQ ACCORDION ───
+function toggleFaq(btn) {
+  const item = btn.parentElement;
+  const wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!wasOpen) item.classList.add('open');
+}
+
+// ─── FORM SUBMIT ───
+function submitForm() {
+  const toast = document.getElementById('toast');
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 3500);
+}
+
+// ─── EMAIL SUBSCRIBERS (newsletter) ───
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+});
+
+// ─── SCROLL ANIMATION ───
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.card, .testi-card, .step-card, .blog-card, .portfolio-card, .product-card').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(16px)';
+  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease, border-color 0.3s';
+  observer.observe(el);
+});
+</script>
+</body>
+</html>
